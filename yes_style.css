@@ -19,8 +19,39 @@ body {
 }
 
 /* Style for the GIF container */
-.gif_container { /* Corrected typo in the class name */
+.gif_container {
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Centers GIF horizontally */
     align-items: center; /* Centers GIF vertically */
+    margin: 20px 0; /* Adds spacing above and below the GIF */
+}
+
+/* Style for the buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between buttons */
+}
+
+/* General button styles */
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f76d82; /* Pinkish background color */
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #e65571; /* Slightly darker pink on hover */
+    transform: scale(1.1); /* Grows slightly on hover */
+}
+
+/* Style for the "No" button with dynamic positioning */
+#noButton {
+    position: absolute; /* Required for dynamic positioning */
 }
