@@ -1,22 +1,15 @@
+/* General body styles */
 body {
     display: flex;
+    flex-direction: clumn; /* Ensures proper stacking of header and buttons */
     justify-content: center;
     align-items: center;
     height: 90vh;
+    margin: 0;
     background-color: rgb(185, 249, 246);
 }
 
-#noButton {
-    position: absolute;
-    left: 150px;
-    transition: 0.5s;
-}
-
-#yesButton {
-    position: absolute;
-    right: 150px;
-}
-
+/* Header text styling */
 .header_text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
@@ -27,15 +20,17 @@ body {
     margin-bottom: 0;
 }
 
+/* Buttons container styles */
 .buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-around; /* Space between the buttons */
     align-items: center;
+    width: 100%; /* Take up full width for spacing */
     margin-top: 20px;
-    margin-left: 20px;
+    padding: 0 20px; /* Add spacing on left and right  */
 }
 
+/* Buttons shared styling */
 .btn {
     background-color: #ffffff;
     color: rgb(233, 48, 48);
@@ -43,53 +38,66 @@ body {
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
 }
 
+/* Button hover affect */
+.btn:hover {
+    background-color: rgb(233, 48, 48);
+    color: #ffffff;
+}
+
+/* Specific button positioning (flex replaces absolute) */
+#noButton {
+    transition: transform 0.5s ease; /* Smooth animations */
+}
+
+#noButton:hover {
+    transform: translateX(-10px); /* Example animation affect */
+}
+
+#yesButton {
+   transition: transform 0.5s ease;
+}
+
+#yesButton:hover {
+    transform: translateX(10px); /* Example animation affect */
+}
+
+/* Gif container (if required) */
 .gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
-@media only screen and (max-width: 320px) and (max-height: 568px) {
+/* Media query for small devices (common breakpoints) */
+@media only screen and (max-width: 768px) {
     body {
-        height: 100vh;
+        height: 100vh; /* Ensure full screen height */
     }
 
     .header_text {
-        font-size: 20px;
-    }
-
-    img {
-        height: 60vh;
+        font-size: 20px; /* Adjusted for smallwer screens */
     }
 
     .btn {
-        padding: 10px 18px;
+        padding: 10px 18px; /* Reduced buttons size */
         font-size: 12px;
     }
 }
 
-@media only screen and (max-width: 414px) and (max-height: 736px) {
-    body {
-        height: 90vh;
-    }
-
+@media only screen and (max-width: 414px)) {
     .header_text {
-        font-size: 28px;
-    }
-
-    img {
-        height: 60vh;
+        font-size: 24px;
     }
 
     .btn {
-        padding: 15px 25px;
-        font-size: 14px;
+        padding: 8px 16px;
+        font-size: 12px;
     }
 }
