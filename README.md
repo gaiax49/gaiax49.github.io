@@ -4,16 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valentine's Surprise</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Ensure the path matches your file structure -->
-        <style>
-            /* Inline CSS for the No button's position */
-            #noButton {
-                position: absolute; /* Required for dynamic positioning */
-            }
-        </style>
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <!-- Container for all content -->
         <div class="container">
+            <!-- Text section -->
             <div>
                 <h1 class="header_text">
                     Hoai bubby c: ! Yes it is I, your girlfriend huehuehue...
@@ -21,11 +18,15 @@
                 </h1>
                 <h1 class="header_text">Would you like to be my valentine's?</h1>
             </div>
-            <div class="gif_animevalentine">
+
+            <!-- GIF section -->
+            <div class="gif_container">
                 <img src="https://c.tenor.com/u-WBOLnVe1IAAAAC/anime-thanks-love.gif" 
                      alt="An anime character blushing and saying thanks with love hearts" 
                      width="300">
             </div>
+
+            <!-- Buttons section -->
             <div class="buttons">
                 <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
                 <button class="btn" id="noButton" 
@@ -33,11 +34,15 @@
                         onclick="moveButton()">No</button>
             </div>
         </div>
+
+        <!-- JavaScript functionality -->
         <script>
+            // Redirect to "Yes" page when the Yes button is clicked
             function nextPage() {
-                window.location.href = "yes.html"; // Redirect to "Yes" page
+                window.location.href = "yes.html";
             }
 
+            // Move the "No" button to a random position on hover or click
             function moveButton() {
                 var noButton = document.getElementById('noButton');
                 var maxX = window.innerWidth - noButton.offsetWidth;
