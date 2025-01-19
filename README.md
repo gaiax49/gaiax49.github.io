@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valentine's Surprise</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="styles.css"> <!-- Ensure the path matches your file structure -->
         <style>
-            /* Inline CSS for dynamic button positioning */
+            /* Inline CSS for the No button's position */
             #noButton {
                 position: absolute; /* Required for dynamic positioning */
             }
@@ -23,8 +23,8 @@
             </div>
             <div class="gif_animevalentine">
                 <img src="https://c.tenor.com/u-WBOLnVe1IAAAAC/anime-thanks-love.gif" 
-                     alt="A cute anime character blushing and saying thanks with love hearts" 
-                     width="300" />
+                     alt="An anime character blushing and saying thanks with love hearts" 
+                     width="300">
             </div>
             <div class="buttons">
                 <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
@@ -34,25 +34,16 @@
             </div>
         </div>
         <script>
-            // Navigate to the "Yes" page when the "Yes" button is clicked
             function nextPage() {
-                window.location.href = "yes.html";
+                window.location.href = "yes.html"; // Redirect to "Yes" page
             }
 
-            // Move the "No" button to a random position within the viewport
             function moveButton() {
-                // Reference the "No" button
                 var noButton = document.getElementById('noButton');
-                
-                // Get the maximum allowed coordinates
                 var maxX = window.innerWidth - noButton.offsetWidth;
                 var maxY = window.innerHeight - noButton.offsetHeight;
-                
-                // Randomly generate new positions within the boundaries
                 var x = Math.random() * maxX;
                 var y = Math.random() * maxY;
-
-                // Apply the new positions to the button
                 noButton.style.left = `${x}px`;
                 noButton.style.top = `${y}px`;
             }
