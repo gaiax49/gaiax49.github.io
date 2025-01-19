@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Added semicolon */
+    background-color: rgb(189, 135, 122); /* Fixed RGB values */
+}
+
+.header_text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fixed quotation */
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px; /* Fixed typo */
+}
+
+.gif_containter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
