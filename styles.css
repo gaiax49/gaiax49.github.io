@@ -1,7 +1,7 @@
 /* General body styles */
 body {
     display: flex;
-    flex-direction: clumn; /* Ensures proper stacking of header and buttons */
+    flex-direction: column; /* Fixed typo: "clumn" to "column" */
     justify-content: center;
     align-items: center;
     height: 90vh;
@@ -27,7 +27,8 @@ body {
     align-items: center;
     width: 100%; /* Take up full width for spacing */
     margin-top: 20px;
-    padding: 0 20px; /* Add spacing on left and right  */
+    padding: 0 20px; /* Add spacing on left and right */
+    position: relative; /* Added: Ensures positioning is relative to the container */
 }
 
 /* Buttons shared styling */
@@ -44,27 +45,24 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Button hover affect */
+/* Button hover effect */
 .btn:hover {
     background-color: rgb(233, 48, 48);
     color: #ffffff;
 }
 
-/* Specific button positioning (flex replaces absolute) */
+/* Specific button styles */
 #noButton {
+    position: absolute; /* Allows the button to move freely */
     transition: transform 0.5s ease; /* Smooth animations */
 }
 
-#noButton:hover {
-    transform: translateX(-10px); /* Example animation affect */
-}
-
 #yesButton {
-   transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 #yesButton:hover {
-    transform: translateX(10px); /* Example animation affect */
+    transform: translateX(10px); /* Example animation effect */
 }
 
 /* Gif container (if required) */
@@ -82,16 +80,17 @@ body {
     }
 
     .header_text {
-        font-size: 20px; /* Adjusted for smallwer screens */
+        font-size: 20px; /* Adjusted for smaller screens */
     }
 
     .btn {
-        padding: 10px 18px; /* Reduced buttons size */
+        padding: 10px 18px; /* Reduced button size */
         font-size: 12px;
     }
 }
 
-@media only screen and (max-width: 414px)) {
+/* Fix: Removed extra closing parenthesis */
+@media only screen and (max-width: 414px) {
     .header_text {
         font-size: 24px;
     }
