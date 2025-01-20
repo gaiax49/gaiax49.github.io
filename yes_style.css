@@ -1,57 +1,46 @@
-/* Style for the entire body to center content */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e4;
+    color: #333;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 20px;
+}
+.header_text {
+    font-size: 3rem;
+    color: #ff4081;
+    animation: fadeIn 2s ease-in-out;
+}
+.gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensures the body spans the full viewport height */
-    margin: 0; /* Removes default browser margin */
-    background-color: rgb(189, 135, 122); /* Sets the background color */
 }
-
-/* Style for the header text */
-.header_text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font with fallbacks */
-    font-size: 50px; /* Large font size */
-    font-weight: bold; /* Bold text */
-    color: white; /* White text color */
-    text-align: center; /* Centers text */
-    margin: 0; /* Removes extra margin for perfect centering */
+.gif_container img {
+    max-width: 100%;
+    height: auto;
 }
-
-/* Style for the GIF container */
-.gif_container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers GIF horizontally */
-    align-items: center; /* Centers GIF vertically */
-    margin: 20px 0; /* Adds spacing above and below the GIF */
-}
-
-/* Style for the buttons */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Adds spacing between buttons */
-}
-
-/* General button styles */
-.btn {
-    font-size: 18px;
-    font-weight: bold;
+.navigation button {
     padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4081;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f76d82; /* Pinkish background color */
-    color: white;
-    transition: transform 0.2s, background-color 0.2s;
 }
-
-.btn:hover {
-    background-color: #e65571; /* Slightly darker pink on hover */
-    transform: scale(1.1); /* Grows slightly on hover */
+.navigation button:hover {
+    background-color: #ff658a;
 }
-
-/* Style for the "No" button with dynamic positioning */
-#noButton {
-    position: absolute; /* Required for dynamic positioning */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
